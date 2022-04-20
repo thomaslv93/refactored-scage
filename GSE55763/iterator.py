@@ -10,7 +10,8 @@ def sliceify(func, slce):
     if not slce.step: step = 1
     return [func(step * i + start) for i in range((stop - start) // step)]
 
-# Define a context manager and iterator
+# Define a context manager and iterator for the Epigenome-wide association study
+# (EWAS) in dataset GSE55763
 class ewas_cm_it():
     def __init__(self, col_idxs=[]):
         self.CPG_SITES = pd.read_csv(FOLDERPATH+'signal_sitenames.csv').values.flatten()
