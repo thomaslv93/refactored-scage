@@ -1,8 +1,9 @@
 #! /usr/bin/env python3
 import numpy as np
 import pandas as pd
+import os
 
-FOLDERPATH = '/Lasagna/tlv/cpg_datasets/GSE55763/byte_iterator/'
+FOLDERPATH = os.path.dirname(__file__) + '/'
 
 def sliceify(func, slce):
     start, stop, step = slce.start, slce.stop, slce.step
